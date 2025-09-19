@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: git-pod
+  labels:
+    app: git
+spec:
+  containers:
+    - name: git-container
+      image: alpine/git:latest   # lightweight Git image
+      command: [ "sleep", "3600" ]  # keep container alive
